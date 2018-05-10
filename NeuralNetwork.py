@@ -76,7 +76,7 @@ conv_4 = Conv2D(conv_depth_2, (kernel_size, kernel_size), padding='same', activa
 pool_2 = MaxPooling2D(pool_size=(pool_size, pool_size))(conv_4)
 drop_2 = Dropout(drop_prob_1)(pool_2)
 
-# Conv [64] -> Conv [64] -> Pool (with dropout on the pooling layer)
+# Conv [128] -> Conv [128] -> Pool (with dropout on the pooling layer)
 conv_5 = Conv2D(conv_depth_2, (kernel_size, kernel_size), padding='same', activation='relu')(drop_2)
 conv_6 = Conv2D(conv_depth_2, (kernel_size, kernel_size), padding='same', activation='relu')(conv_5)
 pool_3 = MaxPooling2D(pool_size=(pool_size, pool_size))(conv_6)
